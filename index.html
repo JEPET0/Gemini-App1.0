@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MOVE STUDIO - Entrena mejor. Vive mejor.</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#82FD14", // RGB(130, 253, 20) - Neon Green
+              "primary-hover": "#74E312", // Slightly darker for hover states
+              "background-light": "#F9FAFB",
+              "background-dark": "#000000", 
+              "surface-light": "#FFFFFF",
+              "surface-dark": "#121212",
+            },
+            fontFamily: {
+              display: ["Inter", "sans-serif"],
+              sans: ["Inter", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              xl: "1rem",
+              "2xl": "1.5rem",
+              "3xl": "2rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      
+      /* Modern Typography Update for Paragraphs */
+      p {
+        font-size: 1.125rem; /* 18px mobile */
+        line-height: 1.75;
+      }
+
+      @media (min-width: 768px) {
+        p {
+          font-size: 1.25rem; /* 20px desktop */
+          line-height: 1.8;
+        }
+      }
+
+      /* Custom scrollbar for a cleaner look */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111827;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #374151;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #82FD14;
+      }
+      
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+
+      /* Animations */
+      @keyframes fade-in-down {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-down {
+        animation: fade-in-down 0.3s ease-out forwards;
+      }
+
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fade-in-up 0.6s ease-out forwards;
+      }
+
+      .mark-primary {
+        background: linear-gradient(120deg, #82FD14 0%, #82FD14 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0.3em;
+        background-position: 0 88%;
+        transition: background-size 0.25s ease-in;
+      }
+      
+      /* Light Mode: Animate on Hover */
+      html:not(.dark) .mark-primary:hover {
+        background-size: 100% 88%;
+      }
+
+      /* Dark Mode: Static Full Highlight for Contrast */
+      html.dark .mark-primary {
+        background-size: 100% 88%;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6"
+  }
+}
+</script>
+</head>
+  <body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 antialiased">
+    <div id="root"></div>
+  </body>
+</html>
